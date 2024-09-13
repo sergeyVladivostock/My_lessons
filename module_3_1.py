@@ -1,7 +1,6 @@
 calls = 0
 j = ["Hello", "Cat", "Dog", "House"]
 
-
 def count_calls():
     global calls
     calls = calls + 1
@@ -12,8 +11,6 @@ def string_info(string):
     count_calls()
     return string
 
-
-
 def is_contains(string,list_to_search):
     count_calls()
     top = False
@@ -22,9 +19,6 @@ def is_contains(string,list_to_search):
             top = True
             break
     return top
-
-count_calls()
-
 
 print(string_info('Poffendui'))
 print(is_contains("Hello",j))
