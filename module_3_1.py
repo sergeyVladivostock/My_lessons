@@ -7,26 +7,26 @@ def count_calls():
     calls = calls + 1
     return calls
 
-def string_info():
-    string = input("Введите текст: ").lower()
-    # global string
+def string_info(string):
     string = (len(string),string.upper(),string)
     count_calls()
     return string
 
 
 
-def is_contains():
-    string = input("Введите текст: ").lower()
-    # global string
-    list_to_search = j
-    if list_to_search.count(string):
-        print(True)
-    else:
-        print(False)
+def is_contains(string,list_to_search):
+    count_calls()
+    top = False
+    for i in list_to_search:
+        if string.lower() == i.lower():
+            top = True
+            break
+    return top
+
+count_calls()
 
 
-print(string_info())
-print(is_contains())
+print(string_info('Poffendui'))
+print(is_contains("Hello",j))
 print(calls)
 
