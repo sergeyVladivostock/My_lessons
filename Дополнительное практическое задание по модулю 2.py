@@ -14,4 +14,4 @@ for i in range(1,len(b)) :
                 q.append(j)
             if i > (a/2):
                 break
-print(a,' - ',*q)
+print(a,' -- ',*q)
