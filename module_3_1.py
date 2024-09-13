@@ -19,8 +19,9 @@ def is_contains(string,list_to_search):
             top = True
             break
     return top
-
-print(string_info('Poffendui'))
-print(is_contains("Hello",j))
+a = input("Введите текст: ")
+print(string_info(a))
+b = input("Введите текст: ")
+print(is_contains(b,j))
 print(calls)
 
