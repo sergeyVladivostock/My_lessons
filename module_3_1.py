@@ -4,7 +4,7 @@ j = ["Hello", "Cat", "Dog", "House"]
 def count_calls():
     global calls
     calls = calls + 1
-    return calls
+    # return calls
 
 def string_info(string):
     string = (len(string),string.upper(),string)
