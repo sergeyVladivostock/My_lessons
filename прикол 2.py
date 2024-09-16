@@ -9,10 +9,8 @@ for i in grades:
         else:
             f = i.index(j)
             if i.index(j) != 0 and i.index(j) < 2:
-                b = i[1:len(i)]
                 a = list(x.keys())
-                m = a[-1]
-                x[m] = sum(b)/(len(i)-1)
+                x[a[-1]] = sum(i[1:len(i)])/(len(i)-1)
 print(x)
 print("=======================================")
 t=(x.keys())
