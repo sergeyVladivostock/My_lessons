@@ -6,6 +6,7 @@ def send_email (message,recipient,*,sender = "university.help@gmail.com"):
     c = False
     if "@" not in recipient or "@" not in sender:
         print("Невозможно отправить письмо с адреса", sender, " на адрес", recipient)
+        return
     for i in range(0,len(a)):
         if a[i] in recipient:
             b = True
@@ -25,7 +26,7 @@ def send_email (message,recipient,*,sender = "university.help@gmail.com"):
     else:
         print("НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса", sender, "на адрес", recipient)
 
-send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+send_email('Это сообщение для проверки связи', 'vasyok1337@mail.com')
 print("========================")
 send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
 print("========================")
