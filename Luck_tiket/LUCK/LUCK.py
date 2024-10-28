@@ -1,13 +1,18 @@
-from Luck_tiket.Moscow.luck_msc import luck_msc
+from Luck_tiket.Moscow.luck_msc import *
 
-from Luck_tiket.SPB.luck_spb import luck_spb
+from Luck_tiket.SPB.luck_spb import *
 
-from Luck_tiket.KRDR.luck_krdr import luck_krd
+from Luck_tiket.KRDR.luck_krdr import *
 
-f = luck_spb.spb()
-def luck_all(a):
+
+
+def luck_all():
+   f = int(input('введите номер билета - '))
    luck_krd(f)
    luck_msc(f)
    luck_spb(f)
 
-luck_all(123321)
+
+if __name__ == "__main__":
+
+      luck_all()

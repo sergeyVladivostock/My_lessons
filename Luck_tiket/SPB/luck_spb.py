@@ -1,4 +1,5 @@
-import random
+from Luck_tiket.LUCK.LUCK import *
+
 
 def luck_spb(p):
     p = [int(i) for i in str(p)]
@@ -17,10 +18,13 @@ def luck_spb(p):
         if x == y:
             print('Счастливый билет (по питерской версии)')
             spb += 1
+
         else:
             print('Обычный билет :(')
 
     else:
         print('Номер билета должен быть кратным 2')
 
-luck_spb(22222222)
+if __name__ == "__main__":
+
+    luck_spb(f)
