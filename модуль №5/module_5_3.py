@@ -12,6 +12,9 @@ class House:
                 break
             else:
                 print(i)
+
+
+
     def __len__ (self):
         return self.number_of_floor
 
