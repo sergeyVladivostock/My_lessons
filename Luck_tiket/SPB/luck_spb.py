@@ -1,10 +1,10 @@
 from Luck_tiket.LUCK.LUCK import *
 
-
+spb = 0
 def luck_spb(p):
     p = [int(i) for i in str(p)]
     print(p)
-    spb = 0
+    global spb
 
     if len(p)%2 == 0:
         x = 0

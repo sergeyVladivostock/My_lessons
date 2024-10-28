@@ -1,12 +1,12 @@
 import random
 from Luck_tiket.LUCK.LUCK import *
 
-
+krdr = 0
 def luck_krd(k):
     k = [int(i) for i in str(k)]
     print(k)
-    krdr = 0
-
+    # krdr = 0
+    global krdr
     if len(k) >= 6:
         x = 0
         y = 0

@@ -11,7 +11,8 @@ def luck_all():
    luck_krd(f)
    luck_msc(f)
    luck_spb(f)
-
+   if msc == 1 and spb == 1 and krdr == 1:
+      print("Вам надо срочно в казино. Ваш билет счастливый по всем статьям")
 
 if __name__ == "__main__":
 

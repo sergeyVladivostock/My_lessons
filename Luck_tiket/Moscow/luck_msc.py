@@ -1,10 +1,10 @@
 from Luck_tiket.LUCK.LUCK import *
 
-
+msc = 0
 def luck_msc(m):
     m = [int(i) for i in str(m)]
     print(m)
-    msc = 0
+    global msc
     if len(m)%2 == 0:
         x = 0
         y = 0
