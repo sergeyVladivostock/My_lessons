@@ -1,4 +1,3 @@
-from Luck_tiket.LUCK.LUCK import *
 
 spb = 0
 def luck_spb(p):

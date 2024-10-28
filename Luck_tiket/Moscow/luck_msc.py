@@ -1,4 +1,3 @@
-from Luck_tiket.LUCK.LUCK import *
 
 msc = 0
 def luck_msc(m):

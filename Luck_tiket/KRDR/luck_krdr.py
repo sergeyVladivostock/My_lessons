@@ -1,5 +1,3 @@
-import random
-from Luck_tiket.LUCK.LUCK import *
 
 krdr = 0
 def luck_krd(k):
@@ -19,7 +17,7 @@ def luck_krd(k):
         if x == y:
             print('Счастливый билет (по краснодарской версии)')
             krdr += 1
-
+            return krdr
         else:
             print('Обычный билет :(')
 
