@@ -1,5 +1,3 @@
-
-
 class Vehicle:
 
     __COLOR_VARIANTS = ['yellow', 'black','white', 'red']
@@ -19,6 +17,7 @@ class Vehicle:
         return f'Мощность двигателя: {self.engine}'
     def get_color(self, __color):
         return f'Цвет: {self.color}'
+
     def print_info(self):
         print(f' Модель: {self.model} \n Мощность двигателя: {self.engine} \n Цвет: {self.color} \n Владелец: ', self.owner)
 

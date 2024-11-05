@@ -12,6 +12,7 @@ class Product:
 
 
 class Shop:
+
     def __init__(self, __file_name):
         self.file_name = 'product.txt'
 
