@@ -29,7 +29,7 @@ if __name__ == '__main__':
 
 
 
-    # restaurant1 = Restaurant('1', '4')
+     restaurant1 = Restaurant('1', '4')
     # restaurant1.describe_restaurant()
     # restaurant1.open_restaurant()
     # r2 = Restaurant(5, 12)

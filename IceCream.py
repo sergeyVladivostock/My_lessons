@@ -41,7 +41,34 @@ class User:
     def reset_login_attempts(self):
         self.login_attempts = 0
 
-class Admin
+class Admin(User):
+    def __init__(self, *privileges):
+        self.privileges = privileges
 
-i1 = IceCreamStand('blue', 'black', 'yellow')
-i1.ice_set()
+    # def __str__(self):
+    #     self.privileges = ('разрешено добавлять сообщения', 'разрешено удалять пользователей', 'разрешено банить пользователей')
+
+
+
+class Privileges:
+
+    def __init__(self, *privileges):
+        self.privileges = privileges
+
+    def show_privileges(self):
+        for i in self.privileges:
+            print(i)
+
+if __name__ == '__main__':
+
+    # i1 = IceCreamStand('blue', 'black', 'yellow')
+    # i1.ice_set()
+
+    # a1 = Admin('«разрешено добавлять сообщения»', '«разрешено удалять пользователей»', '«разрешено банить пользователей»')
+    # a1.show_privileges()
+
+    p1 = Privileges('«разрешено добавлять сообщения»', '«разрешено удалять пользователей»', '«разрешено банить пользователей»')
+    a1 = Admin(p1.show_privileges())
+
+
+

@@ -1,3 +1,4 @@
+"""Класс для представления автомобиля."""
 class Car():
     """Простая модель автомобиля."""
     def __init__(self, make, model, year):
@@ -5,31 +6,26 @@ class Car():
         self.make = make
         self.model = model
         self.year = year
-        self.odometer_reading = 100
-
+        self.odometer_reading = 0
     def get_descriptive_name(self):
         """Возвращает аккуратно отформатированное описание."""
         long_name = str(self.year) + ' ' + self.make + ' ' + self.model
         return long_name.title()
-
     def read_odometer(self):
         """Выводит пробег машины в милях."""
         print("This car has " + str(self.odometer_reading) + " miles on it.")
-
     def update_odometer(self, mileage):
-        """Устанавливает на одометре заданное значение.
-        При попытке обратной подкрутки изменение отклоняется."""
+        """
+        Устанавливает на одометре заданное значение.
+        При попытке обратной подкрутки изменение отклоняется.
+        """
         if mileage >= self.odometer_reading:
             self.odometer_reading = mileage
         else:
             print("You can't roll back an odometer!")
-
     def increment_odometer(self, miles):
         """Увеличивает показания одометра с заданным приращением."""
-        if miles >= 0:
-            self.odometer_reading += miles
-        else:
-            print('Fuck you!!!')
+        self.odometer_reading += miles
 
 class Battery():
     """Простая модель аккумулятора электромобиля."""
@@ -54,6 +50,10 @@ class Battery():
         message += " miles on a full charge."
         print(message)
 
+    def upgrade_battery(self):
+        if self.battery_size != 85:
+            self.battery_size = 85
+
 class ElectricCar(Car):
 
     """Представляет аспекты машины, специфические для электромобилей."""
@@ -62,28 +62,3 @@ class ElectricCar(Car):
                 Затем инициализирует атрибуты, специфические для электромобиля."""
         super().__init__(make, model, year)
         self.battery = Battery()
-
-    # def describe_battery(self):
-    #     """Выводит информацию о мощности аккумулятора."""
-    #     print("This car has a " + str(self.battery_size) + "-kWh battery.")
-
-
-my_tesla = ElectricCar('tesla', 'model s', 2016)
-print(my_tesla.get_descriptive_name())
-my_tesla.battery.describe_battery()
-my_tesla.battery.get_range()
-
-# my_new_car = Car('audi', 'a4', 2016)
-# print(my_new_car.get_descriptive_name())
-# my_new_car.odometer_reading = 23
-# my_new_car.update_odometer(44)
-# my_new_car.read_odometer()
-
-# my_used_car = Car("subaru", 'outback', 2013)
-# print((my_used_car.get_descriptive_name()))
-# my_used_car.update_odometer(23500)
-# my_used_car.read_odometr()
-# my_used_car.increment_odometer(-5)
-# my_used_car.read_odometr()
-
-
